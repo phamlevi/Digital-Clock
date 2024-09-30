@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="The_Garden.jpeg">
+    <div class="user_display">
+        <h1>Current Time</h1>
+
+        <h2 id="time_display"></h2>
+        <h3 id="date_display"></h3>
+
+    </div>
+
+    <script>
+        var today = new Date();
+        //time 
+        setInterval(() => {
+            today = new Date();
+            var time = document.getElementById("time_display");
+            time.innerHTML = today.toLocaleTimeString();
+
+        }, 1000); //update every 1000ms, which is one second
+
+        //date
+        let date = document.getElementById("date_display");
+        date.innerHTML = today.toLocaleDateString();
+
+    </script>
+
+    <audio autoplay loop>
+        <source src="Howl's Moving Castle.mp3">
+    </audio>
+</body>
+
+</html>
